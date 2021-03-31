@@ -1,0 +1,69 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.content-wrapper {
+    padding: 10%;
+    background-color: black;
+}
+
+h1 {
+    font-family: arial, sans-serif;
+    font-weight: bold;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: rgb(221, 221, 221);
+}
+  
+a:hover {
+    color: rgb(197, 197, 197);
+}
+  
+a:active {
+    color: rgb(0, 0, 0);
+}
+
+td {
+    padding: 5px;
+    border: 1px;
+    border-style: solid;
+    border-color: aliceblue;
+}
+
+table {
+    left: 30px; 
+    border: 2px;
+    border-style: solid;
+    border-color: aliceblue;
+}
+
+#applicant {
+    color: yellow;
+}
+
+.mentors, .search {
+    height: auto;
+    top: 50px;
+    padding: 10px 0 10px 0;
+    text-align: justify;
+}
+
+.mentors .mentors2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: teal;
+}
+
+.search {
+    margin: left;
+}
+
+th {
+    padding: 5px;
+}

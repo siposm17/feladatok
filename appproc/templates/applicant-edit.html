@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Applicant edit
+{% endblock %}
+
+{% block content %}
+    <div id="applicant">
+        {% for applicant in applicant %}
+        <h2>Name: </h2>
+        {{ applicant.first_name + " " + applicant.last_name }}
+        <h2>E-mail: </h2>
+        {{ applicant.email }}
+        <h2>Application code: </h2>
+        {{ applicant.application_code }}
+        <form action="/applicants/{{applicant.application_code}}" method="POST">
+            <h2><label for="phone_number">Phone number: </label></h2>
+            <input type="text" id="phone_number" name="phone_number" value="{{applicant.phone_number}}">
+            <input type="submit" name="phone_number_edit" value="Submit">
+            <p><input type="submit" name="delete" value="Delete"></p>
+        </form>
+        {% endfor %}
+        <br>   
+    </div>
+    {% include 'footer.html' %}
+{% endblock %}

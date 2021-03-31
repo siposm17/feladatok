@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Applicants list
+{% endblock %}
+
+{% block content %}
+    <div id="applicant">
+        {% if applicants %}
+            {% for applicant in applicants %}
+            <ul>
+                <li>
+                    {{ applicant.first_name + " " + applicant.last_name }} - {{ applicant.phone_number }}<br>
+                </li>
+            </ul>
+            {% endfor %}
+        {% else %}
+            <p>Not found!</p>
+        {% endif %}
+    </div>
+    {% include 'footer.html' %}
+{% endblock %}

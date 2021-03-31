@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <nav class="menu">
+        <h3>Choose a list</h3>
+        <ul>
+            <li><a href="{{ url_for('mentors_list') }}">Mentors</a></li>
+            <li><a href="{{ url_for('applicants_list') }}">Applicants</a></li>
+        </ul>
+    </nav>
+
+    <section class="search">
+        <h3>Search for applicants name</h3>
+        <form action="/applicants-phone">
+            <input type="text" name="applicant-name">
+            <input type="submit" value="Search">
+        </form>
+    <section class="search">
+        <h3>Search for applicants email</h3>
+        <form action="/applicants-phone">
+            <input type="text" name="email-ending">
+            <input type="submit" value="Search">
+        </form>
+    </section>
+{% endblock %}
+

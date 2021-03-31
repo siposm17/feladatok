@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+<form action="/login" method="POST">
+    <input name="ID" placeholder="Your ID">
+    <input type="password" name="password" placeholder="Your password">
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+    {% if is_login_invalid %}
+        <p>
+            Wrong password!
+        </p>
+    {% endif %}
+
+
+
+{% endblock %}
